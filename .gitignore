@@ -10,3 +10,4 @@ cloudinary_python.txt
 
 # IDE specific directories
 .idea
+.vscode
