@@ -81,8 +81,8 @@
           </li>
           <li class="nav-item">
             <a
-              class="nav-link {% if request.path == '/mood_tracker/' %}active{% endif %}"
-              href="#"
+              class="nav-link {% if request.path == '/diary_list/' %}active{% endif %}"
+              href="{% url 'diary_list' %}"
               >Mood Tracker</a
             >
           </li>
@@ -104,16 +104,16 @@
         <span class="navbar-text">
           <ul>
             {% if user.is_authenticated%}
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                </li>
-                  {% else %}
-                    <li class="nav-item">
-                      <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                    </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+            </li>
             {% endif %}
           </ul>
         </span>
