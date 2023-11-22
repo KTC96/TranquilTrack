@@ -1,0 +1,26 @@
+/* Base.html ----------------------------------------------------- */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #519e8a;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+}
+
+.facebook {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+
+.twitter {
+  background-color: #55acee;
+  border-color: #55acee;
+}
+
+.instagram {
+  background-color: #ac2bac;
+  border-color: #ac2bac;
+}
