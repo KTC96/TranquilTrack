@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="wellbeing, mental health, movember, mindfulness, health, wellness"
+    />
+    <meta
+      name="description"
+      content="TranquilTrack, an app designed to track your mood and improve your mental health, with access to support"
+    />
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <!--CSS-->
+    <link
+      rel="stylesheet"
+      href="{% static 'css/style.css' %}"
+      crossorigin="anonymous"
+    />
+    <!--Fontawesome-->
+    <script
+      src="https://kit.fontawesome.com/64b9a22ea9.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="#" />
+    <!--Google Fonts-->
+    <!--Google maps-->
+    <!--Custom JS-->
+    <title>TranquilTrack</title>
+  </head>
+</html>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'index' %}"
+        ><img class="logo img-fluid" src="{% static 'images/logo.png' %}" />
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a
+              class="nav-link {% if request.path == '/' %}active{% endif %}"
+              aria-current="page"
+              href="{% url 'index' %}"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link {% if request.path == '/mood_tracker/' %}active{% endif %}"
+              href="#"
+              >Mood Tracker</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link {% if request.path == '/support/' %}active{% endif %}"
+              href="#"
+              >Support</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link {% if request.path == '/achievements/' %}active{% endif %}"
+              href="#"
+              >Achievements</a
+            >
+          </li>
+        </ul>
+        <span class="navbar-text">
+          <ul>
+            {% if user.is_authenticated%}
+            <li class="nav-item">
+              <a class="nav-link" href="#">Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+          </ul>
+          {% endif %}
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  {% block content %} {% endblock %}
+
+  <footer class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <p>
+            Email:
+            <a href="mailto:info@tranquiltrack.com" class="text-light"
+              >info@tranquiltrack.com</a
+            >
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h5>Connect with Us</h5>
+
+          <a
+            class="btn btn-primary btn-floating m-1 facebook"
+            href="#"
+            target="_blank"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            class="btn btn-primary btn-floating m-1 twitter"
+            href="#"
+            target="_blank"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            class="btn btn-primary btn-floating m-1 instagram"
+            href="#"
+            target="_blank"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <h5>About TranquilTrack</h5>
+          <p>
+            Navigating mental well-being with TranquilTrack. Your simple tool
+            for mood tracking and self-discovery.
+          </p>
+        </div>
+      </div>
+      <hr class="my-4" />
+      <div class="row">
+        <div class="col-md-6">
+          <p>&copy; 2023 TranquilTrack. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
