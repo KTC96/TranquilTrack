@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% load static %} {% block content %} 
+{% for diary in diary_list %}
+<article>
+  <h2 class="{{ diary.date_created|date:'l' }}">
+    {{ diary.date_created|date:'Y-m-d H:i' }}
+  </h2>
+  <h3>
+    <a href="{% url 'diary_detail' diary.id %}"> {{ diary.title }} </a>
+  </h3>
+</article>
+{% endfor %} {% endblock %}
