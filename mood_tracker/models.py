@@ -1,4 +1,5 @@
 from django.db import models
+from date.today import datetime.date.today() 
 
 # Create your models here.
 class Achievements(models.Model):
@@ -8,3 +9,4 @@ class Achievements(models.Model):
     achievement_icon = models.ImageField(
                         upload_to='images/', default='../default-pic_ls0v0g.png')
     achievement_description = models.CharField(max_length=250)
+    achievement_date = models.DateField(default=date.today, blank=True)
