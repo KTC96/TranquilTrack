@@ -100,3 +100,14 @@ footer {
 .new-affirmation-btn:hover {
   background-color: #407c6d !important;
 }
+
+/* support.html ----------------------------------------------------- */
+#map {
+  width: 500px;
+  height: 500px;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+}
