@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['tranquil-track-0489475d301b.herokuapp.com','8000-ktc96-tranquiltrack-tdbax2k2ev8.ws-eu106.gitpod.io']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
