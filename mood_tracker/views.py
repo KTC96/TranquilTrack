@@ -7,4 +7,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 class Home(LoginRequiredMixin, TemplateView):
     template_name = 'index.html'
 
+class Support(TemplateView):
+    template_name = 'support.html'
    
