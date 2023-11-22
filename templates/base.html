@@ -97,20 +97,20 @@
           </li>
         </ul>
         <span class="navbar-text">
-                    <ul>
-          {% if user.is_authenticated%}
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Logout</a>
-                      </li>
-                      {% else %}
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Sign Up</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
-                      </li>
-                    </ul>
-          {% endif %}
+          <ul>
+            {% if user.is_authenticated%}
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Logout</a>
+                </li>
+                  {% else %}
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Login</a>
+                    </li>
+            {% endif %}
+          </ul>
         </span>
       </div>
     </div>

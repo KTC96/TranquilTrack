@@ -5,12 +5,18 @@
   box-sizing: border-box;
   font-family: "quicksand", sans-serif;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 /* Base.html ----------------------------------------------------- */
 footer {
   background-color: #519e8a;
   color: #ffffff;
   text-align: center;
+  margin-top: auto;
 }
 
 .facebook {
