@@ -1,0 +1,7 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<article>
+  <h2>{{ diary.date_created|date:'Y-m-d H:i' }}</h2>
+  <h3>{{ diary.title }}</h3>
+  <p>{{ diary.content }}</p>
+</article>
+{% endblock %}
