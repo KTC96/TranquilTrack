@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="map">
+  <div id="map"></div>
+</section>
+<script src="{% static 'js/map.js' %}" defer></script>
+
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDLv6foLba6R_4ZlNosCqsZft_U8ruFEE&callback=initMap"
+  aysnc
+  defer
+></script>
+
+{% endblock %}
