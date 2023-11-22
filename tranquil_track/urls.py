@@ -18,9 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-<<<<<<< HEAD
-    path('accounts/', include('allauth.urls')),
-=======
     path('', include('mood_tracker.urls'), name="mood_tracker_urls"),
->>>>>>> 14a6cfa (add templates, render basic view of index, style and add to base.html)
 ]
