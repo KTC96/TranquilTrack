@@ -1,0 +1,1 @@
+web: gunicorn tranquil_track.wsgi
