@@ -19,6 +19,10 @@ footer {
   margin-top: auto;
 }
 
+.logo {
+  max-height: 80px;
+}
+
 .facebook {
   background-color: #3b5998;
   border-color: #3b5998;
@@ -189,4 +193,40 @@ nav {
 
 .logout-container {
   margin: auto;
+}
+
+.sign-up {
+  max-width: 700px;
+  padding: 10px;
+  margin-bottom: 50px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  color: black;
+}
+
+form ul li {
+  list-style-type: none;
+  font-size: 12px;
+  font-weight: 600;
+ 
+}
+
+form label {
+  padding-bottom: 5px;
+  font-weight: 500;
+}
+
+#id_username,
+#id_password1,
+#id_email,
+#id_password2 {
+  display: flex;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+#id_password2 {
+  margin-bottom: 20px;
 }
