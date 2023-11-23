@@ -273,7 +273,7 @@ form label {
 
 /*styling of charts*/
 .charts {
-  width: 70%;
+  width: 80%;
   margin: auto;
   padding: 8%;
 }
@@ -289,6 +289,7 @@ form label {
 @media screen and (max-width: 500px) {
   .charts {
     width: 100%;
+    padding: 1%;
   }
 }
 
