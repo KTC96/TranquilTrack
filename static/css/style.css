@@ -48,7 +48,7 @@ nav {
     rgba(25, 105, 46, 1) 38%,
     rgba(42, 167, 94, 1) 68%
   );
-  margin-bottom: 3rem;
+  
 }
 
 .nav-item {
@@ -66,18 +66,30 @@ nav {
 /* index.html ----------------------------------------------------- */
 .daily-affirmation {
   position: relative;
+  margin: 0 auto;
+  min-height: 500px;
+  width: 80vw;
+  position: relative;
+}
+
+.daily-affirmation img{
+  position: relative;
+  min-height: 450px;
+  width: 100%;
+
 }
 
 .affirmation-box {
-  background: #fff;
-  width: 700px;
-  position: relative;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 90%;
   margin: 0 auto;
   padding: 40px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
   margin-bottom: 50px;
+  z-index: 1;
 }
 
 .affirmation-box h2 {
@@ -85,7 +97,9 @@ nav {
   font-size: 38px;
   position: relative;
   font-family: "quicksand", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: medium;
+
 }
 
 .affirmation-box h2::after {
@@ -102,7 +116,10 @@ nav {
 
 .affirmation-box blockquote {
   font-size: 26px;
-  min-height: 100px;
+  font-size: small;
+  padding: 0 4rem 0 3rem;
+  max-height: 100px;
+  overflow: scroll;
 }
 
 .affirmation-box blockquote::before,
@@ -116,9 +133,11 @@ nav {
   border-radius: 25px;
   border: 1px solid rgb(23, 124, 229);
   width: 150px;
-  height: 50px;
+  height: 35px;
   margin: 5px;
   cursor: pointer;
+  font-size: small;
+  font-weight: bold;
 }
 
 .new-affirmation-btn {
@@ -242,4 +261,74 @@ form label {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+
+@media screen and (min-width: 594px){
+  .affirmation-box h2 {
+    font-size: large;
+  
+  }
+  
+  .affirmation-box blockquote {
+    font-size: 26px;
+    font-size: medium;
+
+  }
+
+  .affirmation-box button {
+    height: 60px;
+    width: 180px;
+    line-height: 28px;
+  }
+}
+
+@media screen and (min-width: 812px){
+  .affirmation-box h2 {
+    margin-bottom: 30px;
+    font-size: 38px; 
+  }
+  
+  .affirmation-box blockquote {
+    font-size: large;
+    padding: 0 6rem 0 6rem;
+    max-height: 300px;
+  }
+
+  .affirmation-box button {
+    height: 65px;
+    border-radius: 30px;
+    font-size:large;
+    
+  }
+}
+
+
+
+
+
+@media screen and (min-width: 1140px){
+  .affirmation-box blockquote {
+    padding: 0 6rem 0 8rem;
+    overflow: unset;
+    padding: 0 10rem 0 10rem;
+ 
+  }
+  .affirmation-box {
+    left: 5%;
+    top: 30%;
+  }
+
+}
+
+
+
+@media screen and (min-width: 1990px){
+  .affirmation-box blockquote {
+    padding: 0 14rem 0 14rem;
+  }
+}
+
+.affirmation-box {
+  
 }
