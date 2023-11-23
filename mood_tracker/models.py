@@ -1,7 +1,7 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 from django.utils import timezone
-from django.contrib.auth.models import User7
+from django.contrib.auth.models import User
 
 # Create your models here.
 class SupportLocations(models.Model):
