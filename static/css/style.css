@@ -126,6 +126,12 @@ nav {
   background-color: #407c6d !important;
 }
 
+/*charts styling*/
+.charts {
+  width: 800px;
+  height: auto;
+}
+
 /* support.html ----------------------------------------------------- */
 #map {
   width: 500px;
@@ -135,9 +141,4 @@ nav {
 .map {
   display: flex;
   justify-content: center;
-}
-
-/*charts styling*/
-.charts {
-  width: 400px;
 }
