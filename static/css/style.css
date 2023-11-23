@@ -210,6 +210,7 @@ form ul li {
   list-style-type: none;
   font-size: 12px;
   font-weight: 600;
+ 
 }
 
 form label {
@@ -228,6 +229,19 @@ form label {
 
 #id_password2 {
   margin-bottom: 20px;
+}
+
+/* 404.html / 403.html / 500.html ----------------------------------- */
+
+.error-page-container {
+  display: grid;
+  place-items: center;
+}
+
+.error-page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*styling of charts*/
