@@ -48,7 +48,6 @@ nav {
     rgba(25, 105, 46, 1) 38%,
     rgba(42, 167, 94, 1) 68%
   );
-  
 }
 
 .nav-item {
@@ -72,11 +71,10 @@ nav {
   position: relative;
 }
 
-.daily-affirmation img{
+.daily-affirmation img {
   position: relative;
   min-height: 450px;
   width: 100%;
-
 }
 
 .affirmation-box {
@@ -99,7 +97,6 @@ nav {
   font-family: "quicksand", sans-serif;
   font-weight: 600;
   font-size: medium;
-
 }
 
 .affirmation-box h2::after {
@@ -229,7 +226,6 @@ form ul li {
   list-style-type: none;
   font-size: 12px;
   font-weight: 600;
-  
 }
 
 form label {
@@ -244,7 +240,7 @@ form label {
 #id_login,
 #id_password {
   display: flex;
-  
+
   margin: 0 auto;
 }
 
@@ -256,7 +252,7 @@ form label {
   margin-bottom: 10px;
 }
 
-.login-logout .row .col-md-8 p a, 
+.login-logout .row .col-md-8 p a,
 .sign-up .row .col-md-8 p a {
   color: #519e8a;
   font-weight: 600;
@@ -277,7 +273,7 @@ form label {
 
 /*styling of charts*/
 .charts {
-  width: 70%;
+  width: 80%;
   margin: auto;
   padding: 8%;
 }
@@ -290,16 +286,21 @@ form label {
   justify-content: center;
 }
 
-@media screen and (min-width: 594px){
+@media screen and (max-width: 500px) {
+  .charts {
+    width: 100%;
+    padding: 1%;
+  }
+}
+
+@media screen and (min-width: 594px) {
   .affirmation-box h2 {
     font-size: large;
-  
   }
-  
+
   .affirmation-box blockquote {
     font-size: 26px;
     font-size: medium;
-
   }
 
   .affirmation-box button {
@@ -309,12 +310,12 @@ form label {
   }
 }
 
-@media screen and (min-width: 812px){
+@media screen and (min-width: 812px) {
   .affirmation-box h2 {
     margin-bottom: 30px;
-    font-size: 38px; 
+    font-size: 38px;
   }
-  
+
   .affirmation-box blockquote {
     font-size: large;
     padding: 0 6rem 0 6rem;
@@ -324,26 +325,23 @@ form label {
   .affirmation-box button {
     height: 65px;
     border-radius: 30px;
-    font-size:large;
-    
+    font-size: large;
   }
 }
 
-@media screen and (min-width: 1140px){
+@media screen and (min-width: 1140px) {
   .affirmation-box blockquote {
     padding: 0 6rem 0 8rem;
     overflow: unset;
     padding: 0 10rem 0 10rem;
- 
   }
   .affirmation-box {
     left: 5%;
     top: 30%;
   }
-
 }
 
-@media screen and (min-width: 1990px){
+@media screen and (min-width: 1990px) {
   .affirmation-box blockquote {
     padding: 0 14rem 0 14rem;
   }
