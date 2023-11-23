@@ -34,25 +34,28 @@ footer {
   border-color: #ac2bac;
 }
 
-
 /* navbar*/
 
-nav{
-  background: rgb(11,64,11);
-  background: linear-gradient(90deg, rgba(11,64,11,1) 14%, rgba(25,105,46,1) 38%, rgba(42,167,94,1) 68%);
+nav {
+  background: rgb(11, 64, 11);
+  background: linear-gradient(
+    90deg,
+    rgba(11, 64, 11, 1) 14%,
+    rgba(25, 105, 46, 1) 38%,
+    rgba(42, 167, 94, 1) 68%
+  );
   margin-bottom: 3rem;
 }
 
-
-.nav-item{
+.nav-item {
   list-style-type: none;
 }
 
-#navbarText a{
+#navbarText a {
   color: #fff;
 }
 
-#navbarText a:hover{
+#navbarText a:hover {
   background-color: #2aa75e;
 }
 
@@ -134,3 +137,7 @@ nav{
   justify-content: center;
 }
 
+/*charts styling*/
+.charts {
+  width: 400px;
+}

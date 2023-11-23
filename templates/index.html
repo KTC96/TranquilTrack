@@ -14,7 +14,14 @@
   </div>
 </section>
 
+<section class="charts">
+  <canvas id="lineChart"></canvas>
+</section>
+
 <script src="{% static 'js/affirmation.js' %}"></script>
+<!--Script tags to load charts-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!--Script to load my javascript file for handling charts-->
 <script type="module" src="{% static 'js/chart.js' %}"></script>
 
 {% endblock %}
