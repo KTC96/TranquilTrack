@@ -9,7 +9,7 @@ class Home(LoginRequiredMixin, TemplateView):
     template_name = 'index.html'
 
 
-class Support(TemplateView):
+class Support(LoginRequiredMixin,TemplateView):
     template_name = 'support.html'
     
     def get_context_data(self, **kwargs):
@@ -18,7 +18,7 @@ class Support(TemplateView):
         context['locations'] = locations 
         return context
 
-class DiaryListView(ListView):
+class DiaryListView(LoginRequiredMixin,ListView):
     model = Diary
     queryset = Diary.objects.all().order_by("-date_created")
     template_name = "diary_list.html"
