@@ -230,3 +230,16 @@ form label {
 #id_password2 {
   margin-bottom: 20px;
 }
+
+/* 404.html / 403.html / 500.html ----------------------------------- */
+
+.error-page-container {
+  display: grid;
+  place-items: center;
+}
+
+.error-page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
