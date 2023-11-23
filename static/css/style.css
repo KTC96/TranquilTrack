@@ -236,7 +236,7 @@ form label {
   margin: auto;
   padding: 8%;
 }
-#y-axis {
+#x-axis {
   position: relative;
   display: flex;
   width: 100%;
