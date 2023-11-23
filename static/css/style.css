@@ -148,14 +148,42 @@ nav {
 
 /* support.html ----------------------------------------------------- */
 #map {
-  width: 500px;
-  height: 500px;
+  min-width: 98%;
+  max-height: 98%;
+  margin: 10px 0 10px 0;
+}
+.table-success {
+  margin: 10px 0 10px 0;
+  width: 100%;
 }
 
+.table-container {
+  padding-right: 20px;
+  padding-left: 20px;
+}
 .map {
   display: flex;
   justify-content: center;
+  height: 600px;
 }
+
+
+.support-heading {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 40px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px 0 0 20px;
+}
+
+.support-text {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20px;
+
+}
+
 
 /* login/signup/logout ----------------------------------------------------- */
 
@@ -346,3 +374,4 @@ form label {
     padding: 0 14rem 0 14rem;
   }
 }
+
