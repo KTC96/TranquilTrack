@@ -17,6 +17,7 @@ const labels = [
 
 const data = {
   labels: labels,
+  xAxisID: "first x axis",
   datasets: [
     {
       label: "Exercise",
