@@ -23,6 +23,9 @@ class Achievements(models.Model):
     achievement_icon = models.ImageField(
                         upload_to='images/', default='../default-pic_ls0v0g.png')
     achievement_description = models.CharField(max_length=250)
+    
+    def __str__(self):
+        return self.achievement_name
 
 class Diary(models.Model):
     title = models.CharField(max_length=200)
