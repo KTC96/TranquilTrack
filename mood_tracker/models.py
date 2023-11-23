@@ -1,6 +1,8 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 from django.utils import timezone
+from django.contrib.auth.models import User7
+
 # Create your models here.
 class SupportLocations(models.Model):
     name = models.CharField(max_length=100, unique=True, blank=False)
@@ -23,6 +25,7 @@ class Achievements(models.Model):
     achievement_icon = models.ImageField(
                         upload_to='images/', default='../default-pic_ls0v0g.png')
     achievement_description = models.CharField(max_length=250)
+    achievement_user = models.ManyToManyField(User, related_name='achievements', blank=True)
     
     def __str__(self):
         return self.achievement_name
