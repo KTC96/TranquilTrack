@@ -22,7 +22,6 @@ new Chart(ctx, {
       },
     ],
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-    xAxisID: "bottom-x-axis",
   },
   // options to set with chart
   options: {
@@ -36,10 +35,6 @@ new Chart(ctx, {
         type: "linear",
         position: "right",
         title: { display: true, text: "Right Y Axis" },
-      },
-      "bottom-x-axis": {
-        position: "bottom",
-        title: { display: true, text: "Bottom X Axis" },
       },
     },
   },
