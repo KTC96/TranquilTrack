@@ -210,7 +210,7 @@ form ul li {
   list-style-type: none;
   font-size: 12px;
   font-weight: 600;
- 
+  
 }
 
 form label {
@@ -221,14 +221,26 @@ form label {
 #id_username,
 #id_password1,
 #id_email,
-#id_password2 {
+#id_password2,
+#id_login,
+#id_password {
   display: flex;
-  max-width: 50%;
+  
   margin: 0 auto;
 }
 
 #id_password2 {
   margin-bottom: 20px;
+}
+
+#id_password {
+  margin-bottom: 10px;
+}
+
+.login-logout .row .col-md-8 p a, 
+.sign-up .row .col-md-8 p a {
+  color: #519e8a;
+  font-weight: 600;
 }
 
 /* 404.html / 403.html / 500.html ----------------------------------- */
