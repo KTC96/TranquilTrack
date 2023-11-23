@@ -48,10 +48,19 @@ nav {
     rgba(25, 105, 46, 1) 38%,
     rgba(42, 167, 94, 1) 68%
   );
+
+
+}
+
+.extra-padding{
+  padding: 0 2rem;
 }
 
 .nav-item {
   list-style-type: none;
+  margin-right: 10px;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
 #navbarText a {
@@ -62,6 +71,9 @@ nav {
   background-color: #2aa75e;
 }
 
+.active{
+  background-color: #2aa75e;
+}
 /* index.html ----------------------------------------------------- */
 .daily-affirmation {
   display: flex;
