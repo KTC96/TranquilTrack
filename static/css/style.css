@@ -43,7 +43,6 @@ nav {
     rgba(25, 105, 46, 1) 38%,
     rgba(42, 167, 94, 1) 68%
   );
-  margin-bottom: 3rem;
 }
 
 .nav-item {
@@ -60,19 +59,26 @@ nav {
 
 /* index.html ----------------------------------------------------- */
 .daily-affirmation {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.index {
+  display: flex;
+  justify-content: center;
+}
 .affirmation-box {
   background: #fff;
   width: 700px;
   position: relative;
-  margin: 0 auto;
+  
   padding: 40px;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .affirmation-box h2 {
@@ -127,14 +133,42 @@ nav {
 
 /* support.html ----------------------------------------------------- */
 #map {
-  width: 500px;
-  height: 500px;
+  min-width: 98%;
+  max-height: 98%;
+  margin: 10px 0 10px 0;
+}
+.table-success {
+  margin: 10px 0 10px 0;
+  width: 100%;
 }
 
+.table-container {
+  padding-right: 20px;
+  padding-left: 20px;
+}
 .map {
   display: flex;
   justify-content: center;
+  height: 600px;
 }
+
+
+.support-heading {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 40px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px 0 0 20px;
+}
+
+.support-text {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20px;
+
+}
+
 
 /* login/signup/logout ----------------------------------------------------- */
 
@@ -205,7 +239,6 @@ form ul li {
   list-style-type: none;
   font-size: 12px;
   font-weight: 600;
- 
 }
 
 form label {
@@ -216,14 +249,26 @@ form label {
 #id_username,
 #id_password1,
 #id_email,
-#id_password2 {
+#id_password2,
+#id_login,
+#id_password {
   display: flex;
-  max-width: 50%;
+
   margin: 0 auto;
 }
 
 #id_password2 {
   margin-bottom: 20px;
+}
+
+#id_password {
+  margin-bottom: 10px;
+}
+
+.login-logout .row .col-md-8 p a,
+.sign-up .row .col-md-8 p a {
+  color: #519e8a;
+  font-weight: 600;
 }
 
 /* 404.html / 403.html / 500.html ----------------------------------- */
@@ -238,3 +283,84 @@ form label {
   flex-direction: column;
   align-items: center;
 }
+
+/*styling of charts*/
+.chart {
+  width: 50%;
+  margin: auto;
+}
+
+.index {
+  margin:auto;
+  
+}
+#x-axis {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+  .charts {
+    width: 100%;
+    padding: 1%;
+  }
+}
+
+@media screen and (min-width: 594px) {
+  .affirmation-box h2 {
+    font-size: large;
+  }
+
+  .affirmation-box blockquote {
+    font-size: 26px;
+    font-size: medium;
+  }
+
+  .affirmation-box button {
+    height: 60px;
+    width: 180px;
+    line-height: 28px;
+  }
+}
+
+@media screen and (min-width: 812px) {
+  .affirmation-box h2 {
+    margin-bottom: 30px;
+    font-size: 38px;
+  }
+
+  .affirmation-box blockquote {
+    font-size: large;
+    padding: 0 6rem 0 6rem;
+    max-height: 300px;
+  }
+
+  .affirmation-box button {
+    height: 65px;
+    border-radius: 30px;
+    font-size: large;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .affirmation-box blockquote {
+    padding: 0 6rem 0 8rem;
+    overflow: unset;
+    padding: 0 10rem 0 10rem;
+  }
+  .affirmation-box {
+    left: 5%;
+    top: 30%;
+  }
+}
+
+@media screen and (min-width: 1990px) {
+  .affirmation-box blockquote {
+    padding: 0 14rem 0 14rem;
+  }
+}
+
