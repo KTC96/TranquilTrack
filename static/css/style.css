@@ -64,30 +64,26 @@ nav {
 
 /* index.html ----------------------------------------------------- */
 .daily-affirmation {
-  position: relative;
-  margin: 0 auto;
-  min-height: 500px;
-  width: 80vw;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.daily-affirmation img {
-  position: relative;
-  min-height: 450px;
-  width: 100%;
+.index {
+  display: flex;
+  justify-content: center;
 }
-
 .affirmation-box {
-  position: absolute;
-  top: 20%;
-  left: 5%;
-  width: 90%;
-  margin: 0 auto;
+  background: #fff;
+  width: 700px;
+  position: relative;
+  
   padding: 40px;
   border-radius: 10px;
   text-align: center;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
   margin-bottom: 50px;
-  z-index: 1;
+  margin-top: 50px;
 }
 
 .affirmation-box h2 {
@@ -95,8 +91,7 @@ nav {
   font-size: 38px;
   position: relative;
   font-family: "quicksand", sans-serif;
-  font-weight: 600;
-  font-size: medium;
+  font-weight: 500;
 }
 
 .affirmation-box h2::after {
@@ -113,10 +108,7 @@ nav {
 
 .affirmation-box blockquote {
   font-size: 26px;
-  font-size: small;
-  padding: 0 4rem 0 3rem;
-  max-height: 100px;
-  overflow: scroll;
+  min-height: 100px;
 }
 
 .affirmation-box blockquote::before,
@@ -130,11 +122,9 @@ nav {
   border-radius: 25px;
   border: 1px solid rgb(23, 124, 229);
   width: 150px;
-  height: 35px;
+  height: 50px;
   margin: 5px;
   cursor: pointer;
-  font-size: small;
-  font-weight: bold;
 }
 
 .new-affirmation-btn {
@@ -300,10 +290,14 @@ form label {
 }
 
 /*styling of charts*/
-.charts {
-  width: 80%;
+.chart {
+  width: 50%;
   margin: auto;
-  padding: 8%;
+}
+
+.index {
+  margin:auto;
+  
 }
 #x-axis {
   position: relative;
