@@ -243,3 +243,18 @@ form label {
   flex-direction: column;
   align-items: center;
 }
+
+/*styling of charts*/
+.charts {
+  width: 70%;
+  margin: auto;
+  padding: 8%;
+}
+#x-axis {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+}
