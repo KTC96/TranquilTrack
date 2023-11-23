@@ -1,7 +1,8 @@
 from django.contrib import admin
-from views.py import Achievements
+from .models import Achievements
+from django_summernote.admin import SummernoteModelAdmin
 
 # Register your models here.
-@admin.register(Achievements):
+@admin.register(Achievements)
 class AchievementsAdmin(SummernoteModelAdmin):
     list_display = ('achievement_id', 'achievement_name', 'achievement_description')
