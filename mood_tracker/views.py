@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Diary
+from .models import Diary, Achievements
 
 
 class Home(LoginRequiredMixin, TemplateView):
@@ -21,10 +21,13 @@ class DiaryListView(LoginRequiredMixin,ListView):
     model = Diary
     queryset = Diary.objects.all().order_by("-date_created")
     template_name = "diary_list.html"
+
 class DiaryDetailView(DetailView):
     model = Diary
     template_name = "diary_detail.html"
 
+class AchievementListView(ListView):
+    model = Achievements
 
 def handle403(request, exception):
     return render(request, '403.html', status=403)
