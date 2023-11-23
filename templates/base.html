@@ -33,8 +33,18 @@
     ></script>
     <!--favicon-->
     <link rel="icon" type="image/x-icon" href="#" />
-    <!--Google Fonts-->
-    <!--Google maps-->
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!--Custom JS-->
     <title>TranquilTrack</title>
   </head>
@@ -43,8 +53,8 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{% url 'index' %}"
-        ><img class="logo img-fluid" src="{% static 'images/logo.png' %}" />
+      <a class="navbar-brand" href="{% url 'index' %}">
+        <img class="logo img-fluid" src="{% static 'images/logo.png' %}" />
       </a>
 
       <button
@@ -60,6 +70,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          {% if user.is_authenticated %}
           <li class="nav-item">
             <a
               class="nav-link {% if request.path == '/' %}active{% endif %}"
@@ -89,10 +100,11 @@
               >Achievements</a
             >
           </li>
+          {% endif %}
         </ul>
         <span class="navbar-text">
           <ul>
-            {% if user.is_authenticated%}
+            {% if user.is_authenticated %}
             <li class="nav-item">
               <a class="nav-link" href="#">Logout</a>
             </li>

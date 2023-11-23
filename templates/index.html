@@ -1,1 +1,20 @@
-{% extends 'base.html' %} {% load static %} {% block content %} {% endblock %}
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="daily-affirmation">
+  <div class="affirmation-box">
+    <h2>Today's Affirmation</h2>
+    <blockquote id="affirmation">Loading...</blockquote>
+    <div>
+      <button
+        class="btn btn-primary new-affirmation-btn"
+        onclick="getAffirmation(api_url)"
+      >
+        New Affirmation
+      </button>
+    </div>
+  </div>
+</section>
+
+<script src="{% static 'js/affirmation.js' %}"></script>
+<script src="{% static 'js/chart.js' %}"></script>
+
+{% endblock %}
