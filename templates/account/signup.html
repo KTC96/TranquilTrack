@@ -5,14 +5,15 @@
 {% endblock %}
 {% block content %}
     <div class="authentication-img container-fluid">
-        <div class="container login">
+        <div class="container sign-up">
             <div class="row">
                 <div class="col-md-8 mt-3 offset-md-2">
-                    <h3>{% trans "Welcome back to Groove Locator" %}</h3>
+                    <h3>{% trans "Welcome to TranquilTrack" %}</h3>
+                    
 
                     <p>
                         {% blocktrans %} If you already have an account, then
-                        please <a class="link" href="{{login_url}}">login</a>.
+                        please <a class="link" href="{{login_url}}">login</a>
                         {% endblocktrans %}
                     </p>
                 </div>
@@ -27,7 +28,7 @@
                                 value="{{ redirect_field_value }}"
                         />
                         {% endif %}
-                        <button class="btn btn-primary" type="submit">
+                        <button class="btn btn-primary login-logout-btn" type="submit">
                             {% trans "Sign Up" %}
                         </button>
                     </form>
