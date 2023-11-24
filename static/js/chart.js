@@ -14,6 +14,7 @@ window.onload = function () {
 
   let jsonData = loadJSON("#jsonData");
 
+  // destructured date from jsonData object
   let date = jsonData.map(({ date_created }) => date_created);
 
   // creates charts on a canvas element
