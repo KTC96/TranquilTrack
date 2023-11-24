@@ -34,7 +34,7 @@ class Diary(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     date_created = models.DateTimeField(default=timezone.now)
+    owner = models.ForeignKey(User, related_name='diaries', blank=True, on_delete=models.CASCADE)
     def __str__(self):
         return self.title
-    class Meta:
         verbose_name_plural = "Diaries"

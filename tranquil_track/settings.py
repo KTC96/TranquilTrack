@@ -32,6 +32,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-alcl2000-tranquiltracka-8yrbsnohxi5.ws-eu106.gitpod.io']
+
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Application definition
@@ -50,7 +52,6 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    'django_summernote',
     'crispy_bootstrap5',
     'crispy_forms',
     'mood_tracker',

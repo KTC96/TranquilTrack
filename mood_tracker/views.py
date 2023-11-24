@@ -40,8 +40,16 @@ class DiaryView(LoginRequiredMixin,CreateView):
     template_name = "diary.html"
     form_class = DiaryForm
 
+    def add_achievement(request):
+        user = request.user
+
+        diary_count = Diary.objects.count()
+        achievements = Achievement.objects.filter(criteria__lte=diary_count)
+        user.userprofile.achievements.set(achievements)
+
     def get_success_url(self):
         return reverse('diary_list')
+        
 
 class DiaryUpdateView(LoginRequiredMixin,UpdateView):
     
@@ -61,14 +69,6 @@ class DiaryDeleteView(LoginRequiredMixin,DeleteView):
     def get_success_url(self):
         return reverse('diary_list')
 
-class DiaryView(LoginRequiredMixin,CreateView):
-    model = Diary
-    template_name = "diary.html"
-    form_class = DiaryForm
-
-    def get_success_url(self):
-        return reverse('diary_list')
-
 class DiaryUpdateView(LoginRequiredMixin,UpdateView):
     
     model = Diary
@@ -78,14 +78,6 @@ class DiaryUpdateView(LoginRequiredMixin,UpdateView):
     def get_success_url(self):
         return reverse('diary_list')
 
-
-class DiaryDeleteView(LoginRequiredMixin,DeleteView):
-    
-    model = Diary
-    template_name = "diary_delete.html"
-
-    def get_success_url(self):
-        return reverse('diary_list')
 
 def handle403(request, exception):
     return render(request, '403.html', status=403)
