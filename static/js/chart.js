@@ -1,9 +1,9 @@
 /*
 Gathers data from index.html template for sterilizing
  */
-function loadJSON(selector) {
+const loadJSON = (selector) => {
   return JSON.parse(document.querySelector(selector).getAttribute("data-json"));
-}
+};
 
 window.onload = function () {
   // gets a canvas element from index.html file
