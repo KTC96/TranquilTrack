@@ -15,7 +15,6 @@
   </div>
 </div>
 
-
 {% for diary in diary_list %}
 <section class="moodtracker">
   <div class="diary-list-container mb-2">
@@ -28,6 +27,12 @@
   </div>
 </section>
 {% endfor %}
+
+<!--this element is used to gather data from db model Diary-->
+<!--then gets gathered in JavaScript file-->
+<!--this was done following this link:
+https://www.hacksoft.io/blog/quick-and-dirty-django-passing-data-to-javascript-without-ajax-->
+<div style="display: none" id="jsonData" data-json="{{ diary_list }}"></div>
 
 <div class="chart">
   <canvas id="lineChart"></canvas>
