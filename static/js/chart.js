@@ -25,14 +25,12 @@ window.onload = function () {
         {
           data: [20, 50, 100, 75, 25, 0],
           label: "Left dataset",
-
           // This binds the dataset to the left y-axis
           yAxisID: "left-y-axis",
         },
         {
           data: [0.1, 0.5, 1.0, 2.0, 1.5, 10],
           label: "Right dataset",
-
           // This binds the dataset to the right y-axis
           yAxisID: "right-y-axis",
         },
