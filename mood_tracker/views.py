@@ -3,7 +3,7 @@ import json
 from django.shortcuts import render, reverse
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, DeleteView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Diary, SupportLocations, Achievements
+from .models import Diary, SupportLocations
 from .forms import DiaryForm
 
 
@@ -63,8 +63,6 @@ class DiaryDetailView(DetailView):
     model = Diary
     template_name = "diary_detail.html"
 
-class AchievementListView(ListView):
-    model = Achievements
 
 class DiaryView(LoginRequiredMixin, CreateView):
     model = Diary
