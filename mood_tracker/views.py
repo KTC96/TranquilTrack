@@ -15,6 +15,11 @@ class Home(LoginRequiredMixin, TemplateView):
     template_name = 'index.html'
 
     def get_context_data(self, **kwargs):
+        """
+        Gathers diary data from db to be sent to index.html template file
+        :param kwargs:
+        :return:
+        """
         context = super().get_context_data(**kwargs)
 
         context['data'] = json.dumps(
