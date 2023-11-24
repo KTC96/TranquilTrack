@@ -349,6 +349,19 @@ form label {
   justify-content: center;
 }
 
+
+.fit-content-width{
+  width: fit-content;
+}
+
+.container-padding{
+  padding: 5rem 2rem;
+}
+
+.margin-top{
+  margin-top: 5rem;
+}
+
 @media screen and (max-width: 500px) {
   .chart {
     width: 100%;
