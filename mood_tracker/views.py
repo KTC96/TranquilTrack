@@ -1,8 +1,7 @@
 from django.shortcuts import render, reverse
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, DeleteView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.messages.views import SuccessMessageMixin
-from .models import Diary, Achievements, SupportLocations
+from .models import Diary, SupportLocations
 from .forms import DiaryForm
 
 class Home(LoginRequiredMixin, TemplateView):
