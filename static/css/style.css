@@ -164,7 +164,32 @@ nav {
   font-weight: 500;
 }
 
-.logout-heading::after {
+/* moodtracker ----------------------------------------------------- */
+.moodtracker {
+  position: relative;
+}
+
+.moodtracker-container {
+  background: #fff;
+  width: 700px;
+  position: relative;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 50px;
+}
+
+.moodtracker-container h2 {
+  margin-bottom: 30px;
+  font-size: 38px;
+  position: relative;
+  font-family: "quicksand", sans-serif;
+  font-weight: 500;
+}
+
+.moodtracker-container h2::after {
   content: "";
   width: 75px;
   height: 3px;
@@ -176,57 +201,49 @@ nav {
   transform: translateX(-50%);
 }
 
-.login-logout-btn {
-  background-color: #519e8a !important;
-  border-color: #519e8a !important;
-  color: #fff;
+.moodtracker-container blockquote {
+  font-size: 26px;
+  min-height: 100px;
 }
 
-.login-logout-btn:hover {
+.moodtracker-container blockquote::before,
+.moodtracker-container blockquote::after {
+  content: '"';
+}
+
+.moodtracker-container button {
+  background: rgb(23, 124, 229);
+  color: #fff;
+  border-radius: 25px;
+  border: 1px solid rgb(23, 124, 229);
+  width: 150px;
+  height: 50px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.moodtracker-btn {
+  background-color: #519e8a !important;
+  border-color: #519e8a !important;
+}
+
+.moodtracker-btn:hover {
   background-color: #407c6d !important;
 }
 
-.logout-text {
-  font-family: "Quicksand", sans-serif;
-  font-size: 20px;
-}
-
-.logout-container {
-  margin: auto;
-}
-
-.sign-up {
-  max-width: 700px;
-  padding: 10px;
-  margin-bottom: 50px;
+.diary-list-container {
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  color: black;
-}
-
-form ul li {
-  list-style-type: none;
-  font-size: 12px;
-  font-weight: 600;
- 
-}
-
-form label {
-  padding-bottom: 5px;
-  font-weight: 500;
-}
-
-#id_username,
-#id_password1,
-#id_email,
-#id_password2 {
-  display: flex;
-  max-width: 50%;
+  width: 700px;
+  position: relative;
   margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
-#id_password2 {
-  margin-bottom: 20px;
+.text-center {
+  border: 5px solid;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }

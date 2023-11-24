@@ -1,7 +1,14 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
-<article>
-  <h2>{{ diary.date_created|date:'Y-m-d H:i' }}</h2>
-  <h3>{{ diary.title }}</h3>
-  <p>{{ diary.content }}</p>
-</article>
+{% extends 'base.html' %} {% load static %} 
+{% block content %}
+{% load crispy_forms_tags %}
+{% load cloudinary %}
+
+<section class="moodtracker">
+  <div class="diary-list-container">
+    <h2>{{ diary.date_created|date:'Y-m-d H:i' }}</h2>
+    <h3>{{ diary.title }}</h3>
+    <h3></h3> {{ diary.content | safe }}</h3>
+  </div>
+</section>
+
 {% endblock %}

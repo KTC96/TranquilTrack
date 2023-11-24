@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% load static %} {% block content %} 
+    <section class="moodtracker">
+        <div class="moodtracker-container">
+            <!-- <h2>Hey, (user)</h2> -->
+            <h2>How are you feeling today?</h2>
+            <p>Log your daily entry</p>
+            <div>
+                <a href="{% url 'diary' %}" class="btn btn-primary moodtracker-btn">
+                Diary Entry
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+

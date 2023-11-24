@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% load static %} 
+
+{% block content %} 
+{% load crispy_forms_tags %}
+{% load cloudinary %}
+
+<section class="moodtracker">
+    <div class="moodtracker-container">
+        <form enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            {{ form | crispy | safe }}
+            <button type="submit" class="btn btn-primary moodtracker-btn">
+              Submit
+            </button>
+          </form>         
+    </div>
+</section>
+
+{% endblock %}
+
+
+

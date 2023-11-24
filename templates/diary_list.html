@@ -1,11 +1,32 @@
 {% extends 'base.html' %} {% load static %} {% block content %} 
 {% for diary in diary_list %}
-<article>
-  <h2 class="{{ diary.date_created|date:'l' }}">
-    {{ diary.date_created|date:'Y-m-d H:i' }}
-  </h2>
-  <h3>
-    <a href="{% url 'diary_detail' diary.id %}"> {{ diary.title }} </a>
-  </h3>
-</article>
-{% endfor %} {% endblock %}
+
+<section class="moodtracker">
+  <div class="diary-list-container mb-2">
+    <p class="{{ diary.date_created|date:'l' }}">
+      {{ diary.date_created|date:'Y-m-d H:i' }}
+    </p>
+    <p>
+      <a href="{% url 'diary_detail' diary.id %}"> {{ diary.title }} </a>
+    </p>
+  </div>
+</section>
+
+{% endfor %} 
+
+<!--Page Navigation -->
+{% if is_paginated %}
+<nav aria-label="Page navigation container"></nav>
+<ul class="pagination justify-content-center">
+    {% if page_obj.has_previous %}
+    <li><a href="?page={{ page_obj.previous_page_number }}" class="btn btn-primary moodtracker-btn">&laquo; PREV </a></li>
+    {% endif %}
+    {% if page_obj.has_next %}
+    <li><a href="?page={{ page_obj.next_page_number }}" class="btn btn-primary moodtracker-btn"> NEXT &raquo;</a></li>
+{% endif %}
+{% endif %}
+
+</ul>
+</nav>
+
+{% endblock %}

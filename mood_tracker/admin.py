@@ -6,6 +6,12 @@ from django_summernote.admin import SummernoteModelAdmin
 # class SupportAdmin(SummernoteModelAdmin):
 #     summernote_fields = ('details')
     
-    
-admin.site.register(Diary)
+@admin.register(Diary)    
+class DiaryAdmin(SummernoteModelAdmin):
+    summernote_fields = ('content',)
+
 admin.site.register(SupportLocations)
+
+
+
+
