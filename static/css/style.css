@@ -72,6 +72,12 @@ nav {
 .active {
   background-color: #2aa75e;
 }
+
+ul{
+  padding-left: 0;
+}
+
+
 /* index.html ----------------------------------------------------- */
 .daily-affirmation {
   display: flex;
