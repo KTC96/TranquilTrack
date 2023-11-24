@@ -6,7 +6,10 @@ from .forms import DiaryForm
 
 
 class Home(LoginRequiredMixin, TemplateView):
+    model = Diary
+    queryset = Diary.objects.all().order_by("-date_created")
     template_name = 'index.html'
+    paginate_by = 10
 
 
 class Support(LoginRequiredMixin, TemplateView):
