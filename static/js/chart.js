@@ -35,11 +35,13 @@ window.onload = function () {
           yAxisID: "right-y-axis",
         },
       ],
+      // creates the labels on the x-axis
       labels: date,
     },
     // options to set with chart
     options: {
       scales: {
+        // binds options to the id from above
         "left-y-axis": {
           type: "linear",
           position: "left",
