@@ -73,10 +73,12 @@ class DiaryView(LoginRequiredMixin, CreateView):
 
     def add_achievement(request):
         user = request.user
-
-        diary_count = Diary.objects.count()
-        achievements = Achievement.objects.filter(criteria__lte=diary_count)
-        user.userprofile.achievements.set(achievements)
+        diary_count = Diary.objects.filter(owner=user).count()
+        if diary_count > 0 :
+            achievements = Achievement.objects.filter(criteria__lte=diary_count)
+            Achievements.post(user)
+        else: 
+            user.userprofile.achievements.set(achievements)
 
     def get_success_url(self):
         return reverse('diary_list')
