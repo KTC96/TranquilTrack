@@ -32,11 +32,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-ACCOUNT_EMAIL_VERIFICATION = 'none'
+CSRF_TRUSTED_ORIGINS = ['https://8000-alcl2000-tranquiltracka-8yrbsnohxi5.ws-eu106.gitpod.io']
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8000", 
-]
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-ktc96-tranquiltrack-tdbax2k2ev8.ws-eu106.gitpod.io']  
 
@@ -51,11 +49,11 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
+    'django_summernote',
     'allauth.socialaccount',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    'django_summernote',
     'crispy_bootstrap5',
     'crispy_forms',
     'mood_tracker',
