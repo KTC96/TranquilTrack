@@ -25,7 +25,7 @@ class Achievements(models.Model):
     achievement_icon = models.ImageField(
         upload_to='images/', default='../default-pic_ls0v0g.png')
     achievement_description = models.CharField(max_length=250)
-    achievement_owner = models.ForeignKey(User, related_name='achievements', default='001', on_delete=models.CASCADE)
+    achievement_user = models.ForeignKey(User, related_name='achievements', default='001', on_delete=models.CASCADE)
 
 
 class Diary(models.Model):
