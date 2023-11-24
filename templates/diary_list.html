@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% load static %} {% block content %} 
+<h2 class="text-center">Previous Entries</h2>
 {% for diary in diary_list %}
-
 <section class="moodtracker">
   <div class="diary-list-container mb-2">
     <p class="{{ diary.date_created|date:'l' }}">
@@ -11,7 +11,6 @@
     </p>
   </div>
 </section>
-
 {% endfor %} 
 
 <!--Page Navigation -->
@@ -25,7 +24,6 @@
     <li><a href="?page={{ page_obj.next_page_number }}" class="btn btn-primary moodtracker-btn"> NEXT &raquo;</a></li>
 {% endif %}
 {% endif %}
-
 </ul>
 </nav>
 

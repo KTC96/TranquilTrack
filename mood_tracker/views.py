@@ -1,5 +1,5 @@
 from django.shortcuts import render, reverse
-from django.views.generic import TemplateView, ListView, DetailView, CreateView
+from django.views.generic import TemplateView, ListView, DetailView, CreateView, DeleteView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from .models import Diary, Achievements, SupportLocations
@@ -40,16 +40,22 @@ class DiaryView(LoginRequiredMixin,CreateView):
 
     def get_success_url(self):
         return reverse('diary_list')
-  
-    # def diary(request):  
-    #     if request.POST == 'POST':  
-    #         form = DiaryForm()  
-    #         if form.is_valid():  
-    #             form.save()  
+
+class DiaryUpdateView(LoginRequiredMixin,UpdateView):
     
-    #     else:  
-    #         form = DiaryForm()  
-    #     context = {  
-    #         'form':form  
-    #     }  
-    #     return render(request, 'diary.html', context)  
+    model = Diary
+    template_name = "diary_update.html"
+    form_class = DiaryForm
+
+    def get_success_url(self):
+        return reverse('diary_list')
+
+
+class DiaryDeleteView(LoginRequiredMixin,DeleteView):
+    
+    model = Diary
+    template_name = "diary_delete.html"
+
+    def get_success_url(self):
+        return reverse('diary_list')
+

@@ -211,17 +211,6 @@ nav {
   content: '"';
 }
 
-.moodtracker-container button {
-  background: rgb(23, 124, 229);
-  color: #fff;
-  border-radius: 25px;
-  border: 1px solid rgb(23, 124, 229);
-  width: 150px;
-  height: 50px;
-  margin: 5px;
-  cursor: pointer;
-}
-
 .moodtracker-btn {
   background-color: #519e8a !important;
   border-color: #519e8a !important;
@@ -239,11 +228,4 @@ nav {
   padding: 5px;
   text-align: center;
   box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
-}
-
-.text-center {
-  border: 5px solid;
-  margin: auto;
-  width: 50%;
-  padding: 10px;
 }

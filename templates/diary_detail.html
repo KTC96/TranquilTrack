@@ -1,13 +1,19 @@
-{% extends 'base.html' %} {% load static %} 
-{% block content %}
-{% load crispy_forms_tags %}
-{% load cloudinary %}
+{% extends 'base.html' %} {% load static %} {% block content %} 
+{% load crispy_forms_tags %} {% load cloudinary %}
 
 <section class="moodtracker">
   <div class="diary-list-container">
-    <h2>{{ diary.date_created|date:'Y-m-d H:i' }}</h2>
+    <h3>{{ diary.date_created|date:'Y-m-d H:i' }}</h3>
     <h3>{{ diary.title }}</h3>
-    <h3></h3> {{ diary.content | safe }}</h3>
+    <p>{{ diary.content | safe }}</p>
+    <div>
+      <a class="btn moodtracker-btn" href="{% url 'diary_update' diary.id %}"
+        >Update</a
+      >
+      <a class="btn btn-danger" href="{% url 'diary_delete' diary.id %}"
+        >Delete</a
+      >
+    </div>
   </div>
 </section>
 
