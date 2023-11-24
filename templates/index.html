@@ -15,6 +15,19 @@
   </div>
 </div>
 
+{% for diary in diary_list %}
+<section class="moodtracker">
+  <div class="diary-list-container mb-2">
+    <p class="{{ diary.date_created|date:'l' }}">
+      {{ diary.date_created|date:'Y-m-d H:i' }}
+    </p>
+    <p>
+      <a href="{% url 'diary_detail' diary.id %}"> {{ diary.title }} </a>
+    </p>
+  </div>
+</section>
+{% endfor %}
+
 <div class="chart">
   <canvas id="lineChart"></canvas>
 </div>

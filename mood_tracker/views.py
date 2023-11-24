@@ -5,7 +5,11 @@ from .models import Diary, SupportLocations
 from .forms import DiaryForm
 
 
-class Home(LoginRequiredMixin, TemplateView):
+class Home(LoginRequiredMixin, ListView):
+    """
+    This is to render the homepage
+    It was changed from TemplateView to ListView to gather data from db
+    """
     model = Diary
     queryset = Diary.objects.all().order_by("-date_created")
     template_name = 'index.html'
