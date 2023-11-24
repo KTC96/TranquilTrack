@@ -1,8 +1,107 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
-<section class="map">
-  <div id="map"></div>
+<section class="support">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="support-heading">Support Near You</h2>
+                <p class="text-muted support-text">Scroll the map to find and contact support near you</p>
+            </div>
+        
+          
+            <div class="col-lg-6 map">
+                <div id="map"></div>
+            </div>
+         
+            <div class="col-lg-6 table-container">
+                <table class="table table-success">
+                    <thead>
+                        <tr>
+                            <th>In Crisis?</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                          <th>Organization</th>
+                          <th>Number</th>
+                          <th>Opening hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td>Samaritans</td>
+                          <td>116 123</td>
+                          <td>24 hours</td>
+                        </tr>
+                        <tr>
+                          <td>SANEline</td>
+                          <td>0300 304 7000</td>
+                          <td>4.30pm-10.30pm daily</td>
+                        </tr>
+                        <tr>
+                            <td>National Suicide Prevention Helpline UK</td>
+                            <td>0800 689 5652</td>
+                            <td>6pm to midnight daily</td>
+                        </tr>
+                        <tr>
+                            <td>Campaign Against Living Miserably (CALM)</td>
+                            <td>0800 58 58 58</td>
+                            <td>5pm-midnight every daily</td>
+                        </tr>
+                        <tr>
+                            <td>Switchboard (If you identify as gay, lesbian, bisexual or transgender)</td>
+                            <td> 0300 330 0630 </td>
+                            <td>10am-10pm daily</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table  class="table table-success">
+                    <thead>
+                        <tr>
+                            <th>Resources</th>
+                            <th></th>
+                            
+                        </tr>
+                        <tr>
+                          <th>Organization</th>
+                          <th>Link</th>
+                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td>Mind</td>
+                          <td><a href="https://www.mind.org.uk/information-support/" target="_blank">https://www.mind.org.uk/information-support/</a></td>
+                          
+                        </tr>
+                        <tr>
+                          <td>NHS (Every mind matters)</td>
+                          <td><a href="https://www.nhs.uk/every-mind-matters/" target="_blank">https://www.nhs.uk/every-mind-matters/</a></td>
+                          
+                        </tr>
+                        <tr>
+                            <td>Heads Together</td>
+                            <td><a href="https://www.headstogether.org.uk/" target="_blank">https://www.headstogether.org.uk/</a></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>SANE</td>
+                            <td><a href="https://www.sane.org.uk/" target="_blank">https://www.sane.org.uk/</a></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Young Minds</td>
+                            <td><a href="https://www.youngminds.org.uk/" target="_blank">https://www.youngminds.org.uk/</a></td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            </div>
+            
+        </div>     
 </section>
-<!-- <script src="{% static 'js/map.js' %}" defer></script> -->
+
+
+
+
 
 <script
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDLv6foLba6R_4ZlNosCqsZft_U8ruFEE&callback=initMap"

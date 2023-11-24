@@ -24,5 +24,6 @@
   "workbench.colorTheme": "Visual Studio Dark",
   "terminal.integrated.gpuAcceleration": "canvas",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": false
+  "editor.formatOnSave": false,
+  "editor.formatOnPaste": false
 }
