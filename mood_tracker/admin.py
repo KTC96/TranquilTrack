@@ -6,6 +6,10 @@ from django_summernote.admin import SummernoteModelAdmin
 class DiaryAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)
 
+@admin.register(Achievements)    
+class AchievementsAdmin(SummernoteModelAdmin):
+    summernote_fields = ('achievement_name',)
+
 admin.site.register(SupportLocations)
 
 
