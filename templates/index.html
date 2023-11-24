@@ -28,8 +28,9 @@
 </section>
 {% endfor %}
 
-<!--this element is used to gather data from db model Diary-->
-<!--then gets gathered in JavaScript file-->
+<!--from views.py data gets gathered from the database Diary Model-->
+<!--and send to this template file-->
+<!--and is then grabbed in JS using getAttribute-->
 <!--this was done following this link:
 https://www.hacksoft.io/blog/quick-and-dirty-django-passing-data-to-javascript-without-ajax-->
 <div style="display: none" id="jsonData" data-json="{{ diary_list }}"></div>
