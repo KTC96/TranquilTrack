@@ -3,7 +3,7 @@ import json
 from django.shortcuts import render, reverse
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, DeleteView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Diary, SupportLocations
+from .models import Diary, SupportLocations, Achievements
 from .forms import DiaryForm
 
 

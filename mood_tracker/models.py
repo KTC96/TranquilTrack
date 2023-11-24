@@ -25,7 +25,7 @@ class Achievements(models.Model):
     achievement_icon = models.ImageField(
         upload_to='images/', default='../default-pic_ls0v0g.png')
     achievement_description = models.CharField(max_length=250)
-    achievement_user = models.ManyToManyField(User, related_name='achievements', blank=True)
+    achievement_user = models.ForeignKey(User, related_name='achievements', blank=True, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.achievement_name
