@@ -14,7 +14,7 @@ window.onload = function () {
 
   let jsonData = loadJSON("#jsonData");
 
-  let date = jsonData.map((item) => item.date_created);
+  let date = jsonData.map(({ date_created }) => date_created);
 
   // creates charts on a canvas element
   new Chart(ctx, {
