@@ -5,6 +5,9 @@ const loadJSON = (selector) => {
   return JSON.parse(document.querySelector(selector).getAttribute("data-json"));
 };
 
+/*
+This function runs when the page loads
+ */
 window.onload = function () {
   // gets a canvas element from index.html file
   const ctx = document.getElementById("lineChart");
