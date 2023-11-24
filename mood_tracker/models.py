@@ -14,21 +14,22 @@ class SupportLocations(models.Model):
     contact_number = models.CharField(max_length=200)
     contact_email = models.EmailField(max_length=200)
 
-    
     def __str__(self):
         return self.name
 
+
 class Achievements(models.Model):
-    #creates the model for user achievement tracking
+    # creates the model for user achievement tracking
     achievement_id = models.AutoField(primary_key=True, unique=True)
     achievement_name = models.CharField(unique=True, max_length=100)
     achievement_icon = models.ImageField(
-                        upload_to='images/', default='../default-pic_ls0v0g.png')
+        upload_to='images/', default='../default-pic_ls0v0g.png')
     achievement_description = models.CharField(max_length=250)
     achievement_user = models.ManyToManyField(User, related_name='achievements', blank=True)
     
     def __str__(self):
         return self.achievement_name
+
 
 class Diary(models.Model):
     title = models.CharField(max_length=200)
@@ -37,4 +38,7 @@ class Diary(models.Model):
     owner = models.ForeignKey(User, related_name='diaries', blank=True, on_delete=models.CASCADE)
     def __str__(self):
         return self.title
+
+    class Meta:
         verbose_name_plural = "Diaries"
+

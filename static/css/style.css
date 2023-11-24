@@ -322,6 +322,9 @@ form label {
   margin: auto;
   padding: 8%;
 }
+.chart p {
+  text-align: center;
+}
 
 .index {
   margin: auto;
