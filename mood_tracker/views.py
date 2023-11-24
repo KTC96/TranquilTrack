@@ -1,8 +1,9 @@
-from django.shortcuts import render
-from django.views.generic import TemplateView, ListView, DetailView
+from django.shortcuts import render, reverse
+from django.views.generic import TemplateView, ListView, DetailView, CreateView, DeleteView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Diary, Achievements
-
+from django.contrib.messages.views import SuccessMessageMixin
+from .models import Diary, Achievements, SupportLocations
+from .forms import DiaryForm
 
 class Home(LoginRequiredMixin, TemplateView):
     template_name = 'index.html'
@@ -17,10 +18,15 @@ class Support(LoginRequiredMixin,TemplateView):
         context['locations'] = locations 
         return context
 
+class MoodtrackerView(LoginRequiredMixin,ListView):
+    model = Diary
+    template_name = "moodtracker.html"
+
 class DiaryListView(LoginRequiredMixin,ListView):
     model = Diary
     queryset = Diary.objects.all().order_by("-date_created")
     template_name = "diary_list.html"
+    paginate_by = 5
 
 class DiaryDetailView(DetailView):
     model = Diary
@@ -28,6 +34,58 @@ class DiaryDetailView(DetailView):
 
 class AchievementListView(ListView):
     model = Achievements
+
+class DiaryView(LoginRequiredMixin,CreateView):
+    model = Diary
+    template_name = "diary.html"
+    form_class = DiaryForm
+
+    def get_success_url(self):
+        return reverse('diary_list')
+
+class DiaryUpdateView(LoginRequiredMixin,UpdateView):
+    
+    model = Diary
+    template_name = "diary_update.html"
+    form_class = DiaryForm
+
+    def get_success_url(self):
+        return reverse('diary_list')
+
+
+class DiaryDeleteView(LoginRequiredMixin,DeleteView):
+    
+    model = Diary
+    template_name = "diary_delete.html"
+
+    def get_success_url(self):
+        return reverse('diary_list')
+
+class DiaryView(LoginRequiredMixin,CreateView):
+    model = Diary
+    template_name = "diary.html"
+    form_class = DiaryForm
+
+    def get_success_url(self):
+        return reverse('diary_list')
+
+class DiaryUpdateView(LoginRequiredMixin,UpdateView):
+    
+    model = Diary
+    template_name = "diary_update.html"
+    form_class = DiaryForm
+
+    def get_success_url(self):
+        return reverse('diary_list')
+
+
+class DiaryDeleteView(LoginRequiredMixin,DeleteView):
+    
+    model = Diary
+    template_name = "diary_delete.html"
+
+    def get_success_url(self):
+        return reverse('diary_list')
 
 def handle403(request, exception):
     return render(request, '403.html', status=403)

@@ -45,8 +45,15 @@ nav {
   );
 }
 
+.extra-padding {
+  padding: 0 2rem;
+}
+
 .nav-item {
   list-style-type: none;
+  margin-right: 10px;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
 #navbarText a {
@@ -57,6 +64,9 @@ nav {
   background-color: #2aa75e;
 }
 
+.active {
+  background-color: #2aa75e;
+}
 /* index.html ----------------------------------------------------- */
 .daily-affirmation {
   display: flex;
@@ -72,7 +82,7 @@ nav {
   background: #fff;
   width: 700px;
   position: relative;
-  
+
   padding: 40px;
   border-radius: 10px;
   text-align: center;
@@ -152,9 +162,8 @@ nav {
   height: 600px;
 }
 
-
 .support-heading {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 40px;
   display: flex;
   justify-content: flex-start;
@@ -162,13 +171,11 @@ nav {
 }
 
 .support-text {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   display: flex;
   justify-content: flex-start;
   padding-left: 20px;
-
 }
-
 
 /* login/signup/logout ----------------------------------------------------- */
 
@@ -193,48 +200,6 @@ nav {
   font-weight: 500;
 }
 
-.logout-heading::after {
-  content: "";
-  width: 75px;
-  height: 3px;
-  border-radius: 3px;
-  background: #519e8a;
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.login-logout-btn {
-  background-color: #519e8a !important;
-  border-color: #519e8a !important;
-  color: #fff;
-}
-
-.login-logout-btn:hover {
-  background-color: #407c6d !important;
-}
-
-.logout-text {
-  font-family: "Quicksand", sans-serif;
-  font-size: 20px;
-}
-
-.logout-container {
-  margin: auto;
-}
-
-.sign-up {
-  max-width: 700px;
-  padding: 10px;
-  margin-bottom: 50px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  color: black;
-}
-
 form ul li {
   list-style-type: none;
   font-size: 12px;
@@ -255,10 +220,9 @@ form label {
   display: flex;
 
   margin: 0 auto;
-}
-
-#id_password2 {
-  margin-bottom: 20px;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
 #id_password {
@@ -269,6 +233,74 @@ form label {
 .sign-up .row .col-md-8 p a {
   color: #519e8a;
   font-weight: 600;
+}
+
+/* moodtracker ----------------------------------------------------- */
+.moodtracker {
+  position: relative;
+}
+
+.moodtracker-container {
+  background: #fff;
+  width: 700px;
+  position: relative;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 50px;
+}
+
+.moodtracker-container h2 {
+  margin-bottom: 30px;
+  font-size: 38px;
+  position: relative;
+  font-family: "quicksand", sans-serif;
+  font-weight: 500;
+}
+
+.moodtracker-container h2::after {
+  content: "";
+  width: 75px;
+  height: 3px;
+  border-radius: 3px;
+  background: #519e8a;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.moodtracker-container blockquote {
+  font-size: 26px;
+  min-height: 100px;
+}
+
+.moodtracker-container blockquote::before,
+.moodtracker-container blockquote::after {
+  content: '"';
+}
+
+.moodtracker-btn {
+  background-color: #519e8a !important;
+  border-color: #519e8a !important;
+}
+
+.moodtracker-btn:hover {
+  background-color: #407c6d !important;
+}
+
+.diary-list-container {
+  background: #fff;
+  width: 700px;
+  position: relative;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  color: black;
 }
 
 /* 404.html / 403.html / 500.html ----------------------------------- */
@@ -286,13 +318,13 @@ form label {
 
 /*styling of charts*/
 .chart {
-  width: 50%;
+  width: 80%;
   margin: auto;
+  padding: 8%;
 }
 
 .index {
-  margin:auto;
-  
+  margin: auto;
 }
 #x-axis {
   position: relative;
@@ -304,7 +336,7 @@ form label {
 }
 
 @media screen and (max-width: 500px) {
-  .charts {
+  .chart {
     width: 100%;
     padding: 1%;
   }
@@ -363,4 +395,3 @@ form label {
     padding: 0 14rem 0 14rem;
   }
 }
-

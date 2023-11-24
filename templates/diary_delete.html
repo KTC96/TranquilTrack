@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<section class="moodtracker mt-2">
+  <div class="moodtracker-container">
+    <form enctype="multipart/form-data" method="POST">
+      {% csrf_token %}
+      <fieldset>
+        <h3>Are you sure you want to delete the entry "{{ diary.title }}"?</h3>
+      </fieldset>
+      <div>
+        <button class="btn btn-danger" type="submit">Yes, Delete</button>
+        <a class="btn moodtracker-btn" href="{% url 'diary_detail' diary.id %}"
+          >Cancel</a
+        >
+      </div>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

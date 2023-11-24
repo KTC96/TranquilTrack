@@ -45,6 +45,7 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    
     <!--Custom JS-->
     <title>TranquilTrack</title>
   </head>
@@ -52,7 +53,7 @@
 
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
+    <div class="container-fluid extra-padding">
       <a class="navbar-brand" href="{% url 'index' %}">
         <img class="logo img-fluid" src="{% static 'images/logo.png' %}" />
       </a>
@@ -82,7 +83,7 @@
           <li class="nav-item">
             <a
               class="nav-link {% if request.path == '/mood_tracker/' %}active{% endif %}"
-              href="#"
+              href="{% url 'mood_tracker' %}"
               >Mood Tracker</a
             >
           </li>
