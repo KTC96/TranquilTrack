@@ -1,3 +1,6 @@
+/*
+Gathers data from index.html template for sterilizing
+ */
 function loadJSON(selector) {
   return JSON.parse(document.querySelector(selector).getAttribute("data-json"));
 }
