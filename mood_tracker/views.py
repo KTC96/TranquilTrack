@@ -7,7 +7,7 @@ from .forms import DiaryForm
 
 class Home(LoginRequiredMixin, ListView):
     """
-    This is to render the homepage
+    This is to render the homepage once logged in
     It was changed from TemplateView to ListView to gather data from db
     """
     model = Diary
