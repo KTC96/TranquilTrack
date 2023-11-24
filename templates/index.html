@@ -15,19 +15,6 @@
   </div>
 </div>
 
-{% for diary in diary_list %}
-<section class="moodtracker">
-  <div class="diary-list-container mb-2">
-    <p class="{{ diary.date_created|date:'l' }}">
-      {{ diary.date_created|date:'Y-m-d H:i' }}
-    </p>
-    <p>
-      <a href="{% url 'diary_detail' diary.id %}"> {{ diary.title }} </a>
-    </p>
-  </div>
-</section>
-{% endfor %}
-
 <!--from views.py data gets gathered from the database Diary Model-->
 <!--and send to this template file-->
 <!--and is then grabbed in JS using getAttribute-->
