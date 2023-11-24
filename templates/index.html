@@ -33,7 +33,7 @@
 <!--and is then grabbed in JS using getAttribute-->
 <!--this was done following this link:
 https://www.hacksoft.io/blog/quick-and-dirty-django-passing-data-to-javascript-without-ajax-->
-<div style="display: none" id="jsonData" data-json="{{ diary_list }}"></div>
+<div id="jsonData" data-json="{{ data }}"></div>
 
 <div class="chart">
   <canvas id="lineChart"></canvas>

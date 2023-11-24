@@ -1,3 +1,5 @@
+import json
+
 from django.shortcuts import render, reverse
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, DeleteView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -5,15 +7,29 @@ from .models import Diary, SupportLocations
 from .forms import DiaryForm
 
 
-class Home(LoginRequiredMixin, ListView):
+class Home(LoginRequiredMixin, TemplateView):
     """
     This is to render the homepage once logged in
     It was changed from TemplateView to ListView to gather data from db
     """
-    model = Diary
-    queryset = Diary.objects.all().order_by("-date_created")
     template_name = 'index.html'
-    paginate_by = 10
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context['data'] = json.dumps(
+            [
+                {
+                    'id': obj.id,
+                    'title': obj.title,
+                    'content': obj.content,
+                    'date_created': obj.date_created.isoformat().split('T')[0]
+                }
+                for obj in Diary.objects.all()
+            ]
+        )
+
+        return context
 
 
 class Support(LoginRequiredMixin, TemplateView):
