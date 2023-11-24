@@ -29,6 +29,8 @@ class Achievements(models.Model):
 class Diary(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
+    mood = models.IntegerField()
+    sleep = models.IntegerField()
     date_created = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
