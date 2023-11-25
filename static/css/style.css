@@ -93,8 +93,7 @@ nav {
 }
 
 .affirmation-box {
-  position: absolute;
-  z-index: 1;
+  position: relative;
   top: 17%;
   left:0%;
   border-radius: 10px;
@@ -256,7 +255,7 @@ form label {
 
 .moodtracker-container {
   background: #fff;
-  width: 700px;
+  max-width: 800px;
   position: relative;
   margin: 0 auto;
   padding: 40px;
@@ -307,7 +306,6 @@ form label {
 
 .diary-list-container {
   background: #fff;
-  width: 700px;
   position: relative;
   margin: 0 auto;
   padding: 5px;
@@ -350,6 +348,23 @@ form label {
   margin: auto;
   text-align: center;
   justify-content: center;
+}
+
+ul{
+  padding-left: 0;
+}
+
+
+.fit-content-width{
+  width: fit-content;
+}
+
+.container-padding{
+  padding: 5rem 2rem;
+}
+
+.margin-signup{
+  margin-right: 10px;
 }
 
 @media screen and (min-width: 310px) {
@@ -470,6 +485,13 @@ form label {
     font-size: large;
   }
 }
+
+@media screen and (min-width: 992px) {
+  .in-line{
+    display: inline-flex;
+  }
+}  
+
 
 @media screen and (min-width: 1140px) {
   .affirmation-box blockquote {

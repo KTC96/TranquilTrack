@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
 
 ALLOWED_HOSTS = ['*']
 
@@ -37,6 +37,8 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000", 
 ]
+
+os.environ["DEBUG"]= 'DEVELOPMENT' 
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-ktc96-tranquiltrack-tdbax2k2ev8.ws-eu106.gitpod.io']  
 
@@ -168,4 +170,4 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-veronika282-tranquiltra-a3dpycqk9sb.ws-eu106.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-veronika282-tranquiltra-9nw9kj7wtn6.ws-eu106.gitpod.io']
