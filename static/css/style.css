@@ -99,7 +99,7 @@ nav {
   border-radius: 10px;
   text-align: center;
   padding: 2rem 4rem;
-
+  margin-top: 50px;
 }
 
 .affirmation-box h2 {
@@ -125,7 +125,6 @@ nav {
 .affirmation-box blockquote {
   font-size: 10px;
   height: 50px;
-  overflow-y: scroll;
   padding: 0 10px;
 }
 
@@ -367,17 +366,17 @@ ul{
   margin-right: 10px;
 }
 
+.btn-signup, .login-logout-btn{
+  background-color: #519e8a;
+  color: #fff
+}
+
 @media screen and (min-width: 310px) {
   .affirmation-box {
     top: 18%;
   }
 }
 
-@media screen and (min-width: 325px) {
-  .affirmation-box blockquote {
-    height: 60px;
-  }
-}
 
 @media screen and (min-width: 340px) {
   .affirmation-box {
@@ -390,9 +389,6 @@ ul{
     top: 18%;
   }
 
-  .affirmation-box blockquote {
-    height: 80px;
-  }
 
   .affirmation-box h2 {
     font-size: 22px;
@@ -496,7 +492,6 @@ ul{
 @media screen and (min-width: 1140px) {
   .affirmation-box blockquote {
     padding: 0 6rem 0 8rem;
-    overflow: unset;
     padding: 0 10rem 0 10rem;
   }
   .affirmation-box {
