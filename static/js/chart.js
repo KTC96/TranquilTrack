@@ -14,8 +14,14 @@ window.onload = function () {
 
   let jsonData = loadJSON("#jsonData");
 
+  // Gathers data from Diary model
+  let data = jsonData.map((item) => {
+    const { date_created, mood, sleep } = item;
+    return [date_created, mood, sleep];
+  });
+
   // destructured date from jsonData object
-  let date = jsonData.map(({ date_created }) => date_created);
+  // let date = jsonData.map(({ date_created }) => date_created);
 
   // creates charts on a canvas element
   new Chart(ctx, {
