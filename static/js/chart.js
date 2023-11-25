@@ -12,6 +12,7 @@ window.onload = function () {
   // gets a canvas element from index.html file
   const ctx = document.getElementById("lineChart");
 
+  // Gets element with id from index.html
   let jsonData = loadJSON("#jsonData");
 
   // Gathers and destructured data from db
@@ -22,11 +23,15 @@ window.onload = function () {
   // Filters all null values from array
   let filtering = (items) => items.filter((e) => e);
 
-  console.log("filtering", filtering(sleep));
-
+  // Displays months if dates less than 3
   const months = ["Jan", "Feb", "Mar", "Apr", "June"];
-  const labels = date.length < 3 ? months : date;
-  console.log("date", date.length);
+  // Displays labels on x-axis
+  const labels =
+    date.length < 3
+      ? months
+      : date.length < 30
+      ? date.slice(date.length - 30)
+      : date;
 
   // creates charts on a canvas element
   new Chart(ctx, {
