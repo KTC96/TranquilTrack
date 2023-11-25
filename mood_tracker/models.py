@@ -2,6 +2,7 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class SupportLocations(models.Model):
@@ -31,8 +32,17 @@ class Achievements(models.Model):
 class Diary(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
-    mood = models.IntegerField()
-    sleep = models.IntegerField()
+    mood = models.IntegerField(null=True, blank=True, 
+            validators=[
+            MaxValueValidator(10),
+            MinValueValidator(1)
+        ])
+    sleep = models.IntegerField(null=True, blank=True, 
+            validators=[
+            MaxValueValidator(10),
+            MinValueValidator(1)
+        ])
+
     date_created = models.DateTimeField(default=timezone.now)
     owner = models.ForeignKey(User, related_name='diaries', default='001', on_delete=models.CASCADE)
     def __str__(self):
