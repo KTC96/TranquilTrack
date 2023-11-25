@@ -38,6 +38,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000", 
 ]
 
+os.environ["DEBUG "]= 'DEVELOPMENT' 
+
 CSRF_TRUSTED_ORIGINS = ['https://8000-ktc96-tranquiltrack-tdbax2k2ev8.ws-eu106.gitpod.io']  
 
 # Application definition
