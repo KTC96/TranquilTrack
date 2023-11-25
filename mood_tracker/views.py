@@ -107,11 +107,12 @@ class DiaryDeleteView(LoginRequiredMixin, DeleteView):
 
 class AchievementListView(LoginRequiredMixin, ListView):
     template_name = "achievements_list.html"
+    model = Achievements
 
     def get_queryset(self):
-        model = Achievements
         user = self.request.user
         queryset = Achievements.objects.filter(achievement_user=user)
+        print(queryset)
         return queryset
 
 def handle403(request, exception):
