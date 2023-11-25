@@ -117,7 +117,9 @@ The Tranquil Track logo is characterised by its soothing green colour, harmonisi
 - Test Django code with Python Linter and implement suggestions.
 - Test JavaScript with JSHint and implement suggestions.
 - Test HTML with WC3 Markup Validator
-- Generate further LIghthouse reports
+- Generate further Lighthouse reports
+- Clinic Partnerships: We plan to explore partnerships with clinics to provide enhanced mental health support.
+- Premium Services: In the future, we aim to introduce premium features, including advanced analytics and personalised insights.
 
 ## Technologies Used
 
@@ -301,3 +303,13 @@ https://www.hacksoft.io/blog/quick-and-dirty-django-passing-data-to-javascript-w
 ### Acknowledgements
 
 - [Code Institute](https://codeinstitute.net/) and [Trust in SODA](https://www.trustinsoda.com/) for organising the hackathon!
+
+### Hack Team Members
+
+- Douglas Maxton
+- Tim Goalen
+- Ganiat Badara
+- Artem Bryzh
+- Amy Lewis
+- Kyle Clow
+- Veronika Nemergutova
