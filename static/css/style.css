@@ -93,8 +93,7 @@ nav {
 }
 
 .affirmation-box {
-  position: absolute;
-  z-index: 1;
+  position: relative;
   top: 17%;
   left:0%;
   border-radius: 10px;
@@ -256,6 +255,7 @@ form label {
 
 .moodtracker-container {
   background: #fff;
+  max-width: 800px;
   position: relative;
   margin: 0 auto;
   padding: 40px;
@@ -361,10 +361,6 @@ ul{
 
 .container-padding{
   padding: 5rem 2rem;
-}
-
-.in-line{
-  display: inline-flex;
 }
 
 .margin-signup{
@@ -489,6 +485,13 @@ ul{
     font-size: large;
   }
 }
+
+@media screen and (min-width: 992px) {
+  .in-line{
+    display: inline-flex;
+  }
+}  
+
 
 @media screen and (min-width: 1140px) {
   .affirmation-box blockquote {
