@@ -30,8 +30,9 @@ window.onload = function () {
       : data[0].length < 30
       ? data[0]
       : data[0].slice(data[0].length - 30);
-  const mood = [];
-  const sleep = [];
+  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const mood = data[1].length === 0 ? arr : data[1];
+  const sleep = data[2].length === 0 ? arr : data[2];
 
   // creates charts on a canvas element
   new Chart(ctx, {
