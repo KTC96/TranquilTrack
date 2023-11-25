@@ -3,7 +3,7 @@ import json
 from django.shortcuts import render, reverse
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, DeleteView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Diary, SupportLocations
+from .models import Diary, SupportLocations, Achievements
 from .forms import DiaryForm
 
 
@@ -70,6 +70,16 @@ class DiaryView(LoginRequiredMixin, CreateView):
     form_class = DiaryForm
 
     def get_success_url(self):
+        user = self.request.user
+        diary_count = Diary.objects.filter(owner=user).count()
+        first_achievement_exists = Achievements.objects.filter(achievement_name='First Diary Entry Made!').exists()
+        if first_achievement_exists: 
+            if diary_count % 5 == 0:
+                print(diary_count)
+                Achievements.objects.create(achievement_user=user, achievement_name='{diary_count} Entry Made!', achievement_description='You made your first Diary entry')
+        else:
+            Achievements.objects.create(achievement_user=user, achievement_name='First Diary Entry Made!', achievement_description='Congrats! You made your first Diary entry') 
+            
         return reverse('diary_list')
 
 

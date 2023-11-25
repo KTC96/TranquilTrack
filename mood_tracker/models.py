@@ -1,6 +1,7 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 
 class SupportLocations(models.Model):
@@ -24,6 +25,7 @@ class Achievements(models.Model):
     achievement_icon = models.ImageField(
         upload_to='images/', default='../default-pic_ls0v0g.png')
     achievement_description = models.CharField(max_length=250)
+    achievement_user = models.ForeignKey(User, related_name='achievements', default='001', on_delete=models.CASCADE)
 
 
 class Diary(models.Model):
@@ -32,7 +34,7 @@ class Diary(models.Model):
     mood = models.IntegerField()
     sleep = models.IntegerField()
     date_created = models.DateTimeField(default=timezone.now)
-
+    owner = models.ForeignKey(User, related_name='diaries', default='001', on_delete=models.CASCADE)
     def __str__(self):
         return self.title
 
