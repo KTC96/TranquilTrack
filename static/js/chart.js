@@ -30,6 +30,8 @@ window.onload = function () {
       : data[0].length < 30
       ? data[0]
       : data[0].slice(data[0].length - 30);
+  const mood = [];
+  const sleep = [];
 
   // creates charts on a canvas element
   new Chart(ctx, {
@@ -38,13 +40,13 @@ window.onload = function () {
       datasets: [
         {
           data: [20, 50, 100, 75, 25, 0],
-          label: "Left dataset",
+          label: "Mood",
           // This binds the dataset to the left y-axis
           yAxisID: "left-y-axis",
         },
         {
           data: [0.1, 0.5, 1.0, 2.0, 1.5, 10],
-          label: "Right dataset",
+          label: "Sleep",
           // This binds the dataset to the right y-axis
           yAxisID: "right-y-axis",
         },
@@ -59,12 +61,12 @@ window.onload = function () {
         "left-y-axis": {
           type: "linear",
           position: "left",
-          title: { display: true, text: "Left Y Axis" },
+          title: { display: true, text: "Mood" },
         },
         "right-y-axis": {
           type: "linear",
           position: "right",
-          title: { display: true, text: "Right Y Axis" },
+          title: { display: true, text: "Sleep" },
         },
       },
     },
