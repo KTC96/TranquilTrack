@@ -28,7 +28,9 @@ class Home(LoginRequiredMixin, TemplateView):
                     'id': obj.id,
                     'title': obj.title,
                     'content': obj.content,
-                    'date_created': obj.date_created.isoformat().split('T')[0]
+                    'date_created': obj.date_created.isoformat().split('T')[0],
+                    'mood': obj.mood,
+                    'sleep': obj.sleep
                 }
                 for obj in Diary.objects.all()
             ]
