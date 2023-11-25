@@ -5,7 +5,9 @@
   <div class="diary-list-container">
     <h3>{{ diary.date_created|date:'Y-m-d H:i' }}</h3>
     <h3>{{ diary.title }}</h3>
-    <p>{{ diary.content | safe }}</p>
+    <p><strong>Sleep</strong>: {{ diary.sleep | safe }}</p>
+    <p><strong>Mood</strong>: {{ diary.mood | safe }}</p>
+    <p><strong>Content</strong>: {{ diary.content | safe }}</p>
     <div>
       <a class="btn moodtracker-btn" href="{% url 'diary_update' diary.id %}"
         >Update</a

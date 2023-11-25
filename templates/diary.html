@@ -6,8 +6,10 @@
 
 <section class="moodtracker container-padding">
     <div class="moodtracker-container">
+      <h2>Mood tracker / Journal Entry</h2>
         <form enctype="multipart/form-data" method="POST">
             {% csrf_token %}
+            <p>Rate from 1 to 10 your mood and sleep, where 1 is the worst and 10 is the best</p>
             {{ form | crispy | safe }}
             <button type="submit" class="btn btn-primary moodtracker-btn">
               Submit

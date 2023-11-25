@@ -3,6 +3,7 @@
 
 <section class="moodtracker mt-2">
   <div class="moodtracker-container">
+    <h2>Mood tracker / Journal Entry</h2>
     <form enctype="multipart/form-data" method="POST">
       {% csrf_token %} {{ form | crispy | safe }}
       <button type="submit" class="btn btn-primary moodtracker-btn">
