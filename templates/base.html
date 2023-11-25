@@ -111,13 +111,13 @@
           {% endif %}
         </ul>
         <span class="navbar-text">
-          <ul>
+          <ul class="in-line">
             {% if user.is_authenticated %}
             <li class="nav-item">
               <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
             </li>
             {% else %}
-            <li class="nav-item">
+            <li class="nav-item margin-signup">
               <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
             </li>
             <li class="nav-item">
