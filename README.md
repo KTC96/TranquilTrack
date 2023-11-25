@@ -181,16 +181,6 @@ The home page (desktop) -
 
 ![Untitled](documentation/Untitled_2.png)
 
-## Bugs
-
-### Unfixed Bugs
-
----
-
-When you try adding text to the content section of the mood tracker it extends beyond the container:
-
-![bug-1.png](documentation/bug-1.png)
-
 ---
 
 ## Deployment
