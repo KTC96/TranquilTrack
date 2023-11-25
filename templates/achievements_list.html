@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% load static %} {% block content %} 
+<h2 class="text-center mt-3">Your Achievements</h2>
+<section class="moodtracker">
+  <div class="diary-list-container mb-2 container-sm">
+    <h4>First Diary Entry Made!</h4>
+    <img src="{% static 'images/green-achievement-ribbon.jpg' %}" height="100px">
+    <p>
+        Congrats! You made your first Diary entry
+    </p>
+  </div>
+</section>
+
+{%endblock%}

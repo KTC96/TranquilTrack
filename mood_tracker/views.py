@@ -105,6 +105,15 @@ class DiaryDeleteView(LoginRequiredMixin, DeleteView):
     def get_success_url(self):
         return reverse('diary_list')
 
+class AchievementListView(LoginRequiredMixin, ListView):
+    template_name = "achievements_list.html"
+    model = Achievements
+
+    def get_queryset(self):
+        user = self.request.user
+        queryset = Achievements.objects.filter(achievement_user=user)
+        print(queryset)
+        return queryset
 
 def handle403(request, exception):
     return render(request, '403.html', status=403)

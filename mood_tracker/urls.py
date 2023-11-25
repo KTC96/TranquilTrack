@@ -10,4 +10,5 @@ urlpatterns = [
     path("diary/<int:pk>",views.DiaryDetailView.as_view(),name ='diary_detail'),
     path("diary_update/<int:pk>",views.DiaryUpdateView.as_view(),name ='diary_update'),
     path("diary_delete/<int:pk>",views.DiaryDeleteView.as_view(),name ='diary_delete'),
+    path("achievements/", views.AchievementListView.as_view(), name='achievements')
 ]
