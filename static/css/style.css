@@ -365,6 +365,13 @@ ul{
   padding: 5rem 2rem;
 }
 
+.in-line{
+  display: inline-flex;
+}
+
+.margin-signup{
+  margin-right: 10px;
+}
 
 @media screen and (min-width: 310px) {
   .affirmation-box {

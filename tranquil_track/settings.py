@@ -168,4 +168,4 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-veronika282-tranquiltra-oyfxa35bai3.ws-eu106.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-veronika282-tranquiltra-9nw9kj7wtn6.ws-eu106.gitpod.io']
