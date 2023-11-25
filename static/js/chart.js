@@ -14,31 +14,19 @@ window.onload = function () {
 
   let jsonData = loadJSON("#jsonData");
 
-  // Gathers data from a Diary model
-  // and return data as an array
-  let data = jsonData.map((item) => {
-    const { date_created, mood, sleep } = item;
-    return [date_created, mood, sleep];
-  });
+  // Gathers and destructured data from db
+  let date = jsonData.map(({ date_created }) => date_created);
+  let mood = jsonData.map(({ mood }) => mood);
+  let sleep = jsonData.map(({ sleep }) => sleep);
 
-  // destructured date from jsonData object
-  // let date = jsonData.map(({ date_created }) => date_created);
+  // Filters all null values from array
+  let filtering = (items) => items.filter((e) => e);
 
-  // displays months if there are less than 3 dates in a Diary model
+  console.log("filtering", filtering(sleep));
+
   const months = ["Jan", "Feb", "Mar", "Apr", "June"];
-  // logic to show labels on x-axis
-  const labels =
-    data[0].length < 3
-      ? months
-      : data[0].length < 30
-      ? data[0]
-      : data[0].slice(data[0].length - 30);
-  // array for if there is no mood or sleep in a Diary model
-  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  // logic for showing mood on a left of chart
-  const mood = data[1].length === 0 ? arr : data[1];
-  // logic for showing sleep on the right of chart
-  const sleep = data[2].length === 0 ? arr : data[2];
+  const labels = date.length < 3 ? months : date;
+  console.log("date", date.length);
 
   // creates charts on a canvas element
   new Chart(ctx, {
@@ -46,13 +34,13 @@ window.onload = function () {
     data: {
       datasets: [
         {
-          data: mood,
+          data: filtering(mood),
           label: "Mood",
           // This binds the dataset to the left y-axis
           yAxisID: "left-y-axis",
         },
         {
-          data: sleep,
+          data: filtering(sleep),
           label: "Sleep",
           // This binds the dataset to the right y-axis
           yAxisID: "right-y-axis",
