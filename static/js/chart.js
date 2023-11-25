@@ -24,7 +24,12 @@ window.onload = function () {
   // let date = jsonData.map(({ date_created }) => date_created);
 
   const months = ["Jan", "Feb", "Mar", "Apr", "June"];
-  const labels = data[0].length < 3 ? months : data[0];
+  const labels =
+    data[0].length < 3
+      ? months
+      : data[0].length < 30
+      ? data[0]
+      : data[0].slice(data[0].length - 30);
 
   // creates charts on a canvas element
   new Chart(ctx, {
