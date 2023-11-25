@@ -7,7 +7,7 @@ class DiaryForm(forms.ModelForm):
 
     class Meta:
         model = Diary
-        fields = ( 'title','date_created', 'content')
+        fields = ('owner', 'title','date_created', 'content')
         widgets = {
             'content': SummernoteWidget
         }
