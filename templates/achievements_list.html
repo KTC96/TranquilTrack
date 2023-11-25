@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% load static %} {% block content %} 
+<h2 class="text-center mt-3">Your Achievements</h2>
+{% for achievement in achievement_list %}
+<section class="moodtracker">
+  <div class="diary-list-container mb-2">
+    <p>
+      {{ achievement.achievement_name }}
+    </p>
+  </div>
+</section>
+{% endfor %} 
+{%endblock%}
