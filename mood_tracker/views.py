@@ -73,10 +73,12 @@ class DiaryView(LoginRequiredMixin, CreateView):
         user = self.request.user
         diary_count = Diary.objects.filter(owner=user).count()
         first_achievement_exists = Achievements.objects.filter(achievement_name='First Diary Entry Made!').exists()
+        second_achievement_exists = Achievements.objects.filter(achievements_name='5 Entries Made!').exists()
+        third_achievement_exists = Achievements.objects.filter(achievements_name='10 Entries Made!').exists()
+        fourth_achievement_exists = Achievements.objects.filter(achievements_name='15 Entries Made!').exists()
         if first_achievement_exists: 
             if diary_count % 5 == 0:
-                print(diary_count)
-                Achievements.objects.create(achievement_user=user, achievement_name='{diary_count} Entry Made!', achievement_description='You made your first Diary entry')
+                Achievements.objects.create(achievement_user=user, achievement_name='10 Entries Made!', achievement_description='Congrats! You made 10 diary entries') if second_achievement_exists else Achievements.objects.create(achievement_user=user, achievement_name='5 Entries Made!', achievement_description='Congrats! You made 5 diary entries')
         else:
             Achievements.objects.create(achievement_user=user, achievement_name='First Diary Entry Made!', achievement_description='Congrats! You made your first Diary entry') 
             
