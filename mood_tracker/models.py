@@ -32,12 +32,12 @@ class Achievements(models.Model):
 class Diary(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
-    mood = models.IntegerField(null=True, blank=True, 
+    mood = models.IntegerField(null=False, blank=False, 
             validators=[
             MaxValueValidator(10),
             MinValueValidator(1)
         ])
-    sleep = models.IntegerField(null=True, blank=True, 
+    sleep = models.IntegerField(null=False, blank=False, 
             validators=[
             MaxValueValidator(10),
             MinValueValidator(1)
