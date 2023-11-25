@@ -39,13 +39,13 @@ window.onload = function () {
     data: {
       datasets: [
         {
-          data: [20, 50, 100, 75, 25, 0],
+          data: mood,
           label: "Mood",
           // This binds the dataset to the left y-axis
           yAxisID: "left-y-axis",
         },
         {
-          data: [0.1, 0.5, 1.0, 2.0, 1.5, 10],
+          data: sleep,
           label: "Sleep",
           // This binds the dataset to the right y-axis
           yAxisID: "right-y-axis",
