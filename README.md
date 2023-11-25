@@ -99,6 +99,8 @@ The Tranquil Track logo is characterised by its soothing green colour, harmonisi
     
 - **Rewards and Achievements:** Earn rewards for consistent journaling and recognising patterns in your mood. Stay motivated with a system that celebrates your progress.
 
+![achPage.png](documentation/achPage.png)
+
 - **Geolocation Assistance:** Based on your location, Tranquil Track identifies nearby places where you can access professional support. Your mental well-being is our priority.
     
     ![support.png](documentation/support.png)
