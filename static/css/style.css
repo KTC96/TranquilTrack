@@ -74,6 +74,18 @@ nav {
 }
 /* index.html ----------------------------------------------------- */
 
+.affirmation-box {
+  background: #fff;
+  width: 700px;
+  position: relative;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15) !important;
+  margin-bottom: 50px;
+}
+
 
 .index {
   justify-content: center;
@@ -246,6 +258,18 @@ form label {
   color: #519e8a;
   font-weight: 600;
 }
+
+.sign-up {
+  max-width: 700px;
+  padding: 10px;
+  margin-bottom: 50px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  color: black;
+}
+
 
 /* moodtracker ----------------------------------------------------- */
 .moodtracker {
