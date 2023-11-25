@@ -21,11 +21,14 @@ class SupportLocations(models.Model):
 class Achievements(models.Model):
     # creates the model for user achievement tracking
     achievement_id = models.AutoField(primary_key=True, unique=True)
-    achievement_name = models.CharField(unique=True, max_length=100)
+    achievement_name = models.CharField(max_length=100)
     achievement_icon = models.ImageField(
         upload_to='images/', default='../default-pic_ls0v0g.png')
     achievement_description = models.CharField(max_length=250)
     achievement_user = models.ForeignKey(User, related_name='achievements', default='001', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.achievement_name
 
 
 class Diary(models.Model):
