@@ -25,13 +25,15 @@ window.onload = function () {
 
   // Displays months if dates less than 3
   const months = ["Jan", "Feb", "Mar", "Apr", "June"];
-  // Displays labels on x-axis
+  // Display data based on logic
   const labels =
     date.length < 3
       ? months
       : date.length < 30
       ? date.slice(date.length - 30)
       : date;
+  const moods = mood.length < 3 ? [1] : filtering(mood);
+  const sleeps = sleep.length < 3 ? [2] : filtering(sleep);
 
   // creates charts on a canvas element
   new Chart(ctx, {
@@ -39,13 +41,13 @@ window.onload = function () {
     data: {
       datasets: [
         {
-          data: filtering(mood),
+          data: moods,
           label: "Mood",
           // This binds the dataset to the left y-axis
           yAxisID: "left-y-axis",
         },
         {
-          data: filtering(sleep),
+          data: sleeps,
           label: "Sleep",
           // This binds the dataset to the right y-axis
           yAxisID: "right-y-axis",
