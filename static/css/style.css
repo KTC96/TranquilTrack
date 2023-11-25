@@ -73,32 +73,39 @@ nav {
   background-color: #2aa75e;
 }
 /* index.html ----------------------------------------------------- */
-.daily-affirmation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .index {
-  display: flex;
   justify-content: center;
+  margin-left: 0;
+  width: 100%;
+  max-height: 80vh;
 }
-.affirmation-box {
-  background: #fff;
-  width: 700px;
-  position: relative;
 
-  padding: 40px;
+.affirmation-frame{
+  width: 100%;
+  max-height: 80vh;
+}
+
+.affirmation-frame img{
+  width: 100%;
+  max-height: 80vh;
+}
+
+.affirmation-box {
+  position: absolute;
+  z-index: 1;
+  top: 17%;
+  left:0%;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
-  margin-bottom: 50px;
-  margin-top: 50px;
+  padding: 2rem 4rem;
+
 }
 
 .affirmation-box h2 {
   margin-bottom: 30px;
-  font-size: 38px;
+  font-size: 15px;
   position: relative;
   font-family: "quicksand", sans-serif;
   font-weight: 500;
@@ -117,8 +124,10 @@ nav {
 }
 
 .affirmation-box blockquote {
-  font-size: 26px;
-  min-height: 100px;
+  font-size: 10px;
+  height: 50px;
+  overflow-y: scroll;
+  padding: 0 10px;
 }
 
 .affirmation-box blockquote::before,
@@ -131,10 +140,10 @@ nav {
   color: #fff;
   border-radius: 25px;
   border: 1px solid rgb(23, 124, 229);
-  width: 150px;
-  height: 50px;
-  margin: 5px;
+  width: 110px;
+  height: 30px;
   cursor: pointer;
+  font-size: x-small;
 }
 
 .new-affirmation-btn {
@@ -247,7 +256,6 @@ form label {
 
 .moodtracker-container {
   background: #fff;
-  width: 700px;
   position: relative;
   margin: 0 auto;
   padding: 40px;
@@ -298,7 +306,6 @@ form label {
 
 .diary-list-container {
   background: #fff;
-  width: 700px;
   position: relative;
   margin: 0 auto;
   padding: 5px;
@@ -343,11 +350,108 @@ form label {
   justify-content: center;
 }
 
+ul{
+  padding-left: 0;
+}
+
+
+.fit-content-width{
+  width: fit-content;
+}
+
+.container-padding{
+  padding: 5rem 2rem;
+}
+
+.in-line{
+  display: inline-flex;
+}
+
+.margin-signup{
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 310px) {
+  .affirmation-box {
+    top: 18%;
+  }
+}
+
+@media screen and (min-width: 325px) {
+  .affirmation-box blockquote {
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 340px) {
+  .affirmation-box {
+    top: 19%;
+  }
+}
+
+@media screen and (min-width: 365px) {
+  .affirmation-box {
+    top: 18%;
+  }
+
+  .affirmation-box blockquote {
+    height: 80px;
+  }
+
+  .affirmation-box h2 {
+    font-size: 22px;
+  }
+
+  .affirmation-box blockquote {
+    font-size: 15px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.affirmation-box button {
+  height: 40px;
+  font-size: small;
+  width: 150px;
+}
+}
+
+
+@media screen and (min-width: 365px) {
+  .affirmation-box {
+    top: 19%;
+  }
+}
+
+@media screen and (min-width: 397px) {
+  .affirmation-box {
+    top: 20%;
+  }
+}
+
+@media screen and (min-width: 415px) {
+  .affirmation-box {
+    top: 21%;
+  }
+}
+
+@media screen and (min-width: 440px) {
+  .affirmation-box {
+    top: 22%;
+  }
+}
+
+@media screen and (min-width: 440px) {
+  .affirmation-box {
+    top: 25%;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .chart {
     width: 100%;
     padding: 1%;
   }
+  
 }
 
 @media screen and (min-width: 594px) {
