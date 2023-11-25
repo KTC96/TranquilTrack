@@ -352,6 +352,20 @@ form label {
   justify-content: center;
 }
 
+ul{
+  padding-left: 0;
+}
+
+
+.fit-content-width{
+  width: fit-content;
+}
+
+.container-padding{
+  padding: 5rem 2rem;
+}
+
+
 @media screen and (min-width: 310px) {
   .affirmation-box {
     top: 18%;
