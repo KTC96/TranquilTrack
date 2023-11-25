@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
             model_name='achievements',
             name='achievement_name',
             field=models.CharField(max_length=100),
-
+        ),
         migrations.AddField(
             model_name='achievements',
             name='achievement_user',
